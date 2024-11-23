@@ -1,3 +1,4 @@
+
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -40,6 +41,7 @@ public class admin_doctor extends HttpServlet {
             pw1.println("}");
             pw1.println(".main-container {"
                     + "display: flex; gap:50px;"
+                    +"margin-bottom:50px;"
                     + "}");
             pw1.println(".profile-container {");
             pw1.println("    display: grid;");
@@ -132,6 +134,15 @@ public class admin_doctor extends HttpServlet {
             pw1.println("    font-weight: 800;");
             pw1.println("    margin-top: 10px;");
             pw1.println("}");
+            pw1.println(".btn {\n"
+                    + "                background-color: #7e7878;\n"
+                    + "                color: #fff;\n"
+                    + "                padding: 10px 20px;\n"
+                    + "                border: none;\n"
+                    + "                border-radius: 20px;\n"
+                    + "                cursor: pointer;\n"
+                    +"text-decoration:none\n"
+                    + "            }");
             pw1.println("</style>");
             pw1.println("</head>");
             pw1.println("<body>");
@@ -172,7 +183,7 @@ public class admin_doctor extends HttpServlet {
                 pw1.println("<p><span>Email: </span>" + email + "</p>");
                 pw1.println("<p><span>Chamber: </span>" + chamber + "</p>");
                 pw1.println("<p><span>Gender: </span>" + gender + "</p>");
-                 pw1.println("<p><span>Fees: </span>" + fees + "</p>");
+                pw1.println("<p><span>Fees: </span>" + fees + "</p>");
 
                 pw1.println("</div>");
                 pw1.println("</div>");
@@ -192,6 +203,9 @@ public class admin_doctor extends HttpServlet {
             }
 
             pw1.println("</div>");
+            pw1.println("<div>"
+                    + "<a href=\"admin/index.html\" class=\"btn\">Back</a>"
+                    + "</div>");
             pw1.println("</body>");
             pw1.println("</html>");
 

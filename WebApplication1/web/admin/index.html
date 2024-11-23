@@ -92,6 +92,24 @@
                 text-decoration: none;
                 color: inherit;
             }
+            
+             .btn {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #555;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .btn:hover {
+                background-color: #333;
+            }
 
             .nav-item button {
                 background: none;
@@ -112,6 +130,9 @@
         </style>
     </head>
     <body>
+         <div>
+             <a href="../homePage.html" class="btn">Back</a>
+         </div>
         <div class="container">
             <header>
                 <h1>Online Medical System</h1>
@@ -136,7 +157,7 @@
                     </form>
                 </div>
                 <div class="nav-item">
-                    <form action="account.html" method="get">
+                    <form action="../account" method="post">
                         <button type="submit">
                             <div class="nav-icon"><img src="images/account.png" alt="Account"></div>
                             <h2>Account</h2>

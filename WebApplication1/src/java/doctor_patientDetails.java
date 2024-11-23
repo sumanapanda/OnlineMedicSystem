@@ -162,7 +162,7 @@ public class doctor_patientDetails extends HttpServlet {
                         + "    <div class=\"container\">\n"
                         + "        <section class=\"about-us\">\n"
                         + "            <h1 style=\"color: #3278a3;\">No appointments booked!!</h1>  \n"
-                        + "            <a href=\"doctor.html\"class=\"btn\"><< Back</a>\n"
+                        + "            <a href=\"Doctor/doctor_patient.html\"class=\"btn\"><< Back</a>\n"
                         + "        </section>\n"
                         + "    </div>\n"
                         + "</body>\n"

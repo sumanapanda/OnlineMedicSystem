@@ -50,6 +50,7 @@ public class adminPatient extends HttpServlet {
                     + "                border-radius: 10px;\n"
                     + "                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n"
                     + "                overflow: hidden;\n"
+                    +"margin-bottom:20px;\n"
                     + "            }\n"
                     + "\n"
                     + "            /* Header Section */\n"
@@ -98,12 +99,22 @@ public class adminPatient extends HttpServlet {
                     + "            .doctor-row::-webkit-scrollbar-thumb {\n"
                     + "                background-color: #007bff;\n"
                     + "                border-radius: 10px;\n"
+                    +"margin-bottom:20px;\n"
                     + "            }\n"
                     + "\n"
                     + "            .doctor-row::-webkit-scrollbar-track {\n"
                     + "                background-color: #e0f7fa;\n"
                     + "            }\n"
                     + "\n"
+                    +".btn {\n"
+                    + "                background-color: #7e7878;\n"
+                    + "                color: #fff;\n"
+                    + "                padding: 10px 20px;\n"
+                    + "                border: none;\n"
+                    + "                border-radius: 20px;\n"
+                    + "                cursor: pointer;\n"
+                    +"text-decoration:none\n"
+                    + "            }\n"
                     + "            /* Patient Card */\n"
                     + "            .patient-card {\n"
                     + "                background-color: #e0f7fa; /* Light blue background for each patient */\n"
@@ -202,8 +213,12 @@ public class adminPatient extends HttpServlet {
                 pw1.println("        </div>"); 
                 pw1.println("    </div>"); 
             }
-
-            pw1.println("</body>\n</html>");
+             pw1.println("</body>");
+             pw1.println("<div>"
+                    + "<a href=\"admin/index.html\" class=\"btn\">Back</a>"
+                    + "</div>");
+           
+            pw1.println("</html>");
 
             con.close();
         } catch (SQLException e) {

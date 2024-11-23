@@ -33,13 +33,6 @@ public class docSignIn extends HttpServlet {
             String q1 = "INSERT INTO doctorInfo(name, email, password,contact,doctor,degree,field,experience,timing,chamber,gender,fees) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement pstmt = con.prepareStatement(q1);
 
-            pwl.println("<html><body>");
-            pwl.println("<script>");
-            pwl.println("localStorage.setItem('username', '" + nm1 + "');");
-            pwl.println("window.location.href = 'Doctor/doctor_patient.html';"); 
-            pwl.println("</script>");
-            pwl.println("</body></html>");
-
             pstmt.setString(1, nm1);
             pstmt.setString(2, nm2);
             pstmt.setString(3, nm3);
@@ -56,7 +49,12 @@ public class docSignIn extends HttpServlet {
             int x = pstmt.executeUpdate();
 
             if (x > 0) {
-                res.sendRedirect("Doctor/doctor_patient.html");
+                pwl.println("<html><body>");
+                pwl.println("<script>");
+                pwl.println("localStorage.setItem('username', '" + nm1 + "');");
+                pwl.println("window.location.href = 'Doctor/doctor_patient.html';");
+                pwl.println("</script>");
+                pwl.println("</body></html>");
             } else {
                 pwl.println("<html><body>Registration Unsuccessful</body></html>");
             }

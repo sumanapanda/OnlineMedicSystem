@@ -76,6 +76,10 @@
         <servlet-name>passPServlet</servlet-name>
         <servlet-class>passPServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>account</servlet-name>
+        <servlet-class>account</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
         <url-pattern>/NewServlet</url-pattern>
@@ -151,6 +155,10 @@
     <servlet-mapping>
         <servlet-name>passPServlet</servlet-name>
         <url-pattern>/passPServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>account</servlet-name>
+        <url-pattern>/account</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

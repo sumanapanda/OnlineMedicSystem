@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
     <head>
         <meta charset="UTF-8">
@@ -32,7 +32,7 @@
                 padding: 25px 30px;
                 border-radius: 5px;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-            }      
+            }
 
             .top {
                 height: 79px;
@@ -203,170 +203,85 @@
     </head>
 
     <body>
-            <div class="container">
-                <div class="top">
-                    <div class="title">Booking</div>
-                    <p>Please fill all the details</p>
-                </div>
-    
-                <div class="content">
-                    <form METHOD="POST" ACTION="../s3">
-                        <div class="user-details">
-                            <div class="input-box">
-                                <span class="details">Full Name</span>
-                                <input type="text" placeholder="Enter your name" name="name">
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Phone Number</span>
-                                <input type="text" placeholder="Enter your number" name="contact">
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Chamber Location</span>
-                                <input type="text" placeholder="Enter chamber location" name="add">
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Payment</span>
-                                <input type="text" name="fee">
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Appointment Day</span>
-                                <input type="text" placeholder="Enter Day of appointment" name="day">
-                            </div>
-                        </div>
-                        <div class="gender-details">
-                            <span class="details">Gender:</span>
-                            <label for="male">Male <input type="radio" name="mygender" id="male" value="male"></label>
-                            <label for="female">Female <input type="radio" name="mygender" id="female" value="female"></label>
-                            <label for="other">Other <input type="radio" name="mygender" id="other" value="others"></label>
-                        </div>
-                </div>
-                <div class="button">
-                    <button>Book Appointment</button>
-                </div>
-            </form>
-        </div>
-    <script>
-        const inputList = document.querySelectorAll('input')
-        const p = document.querySelector('p')
-        const btn = document.querySelector('button')
-        btn.addEventListener('click', (e) => {
-            const filled = [...inputList].every((input) => {
-                return input.value
-            })
-            if (!filled) {
-                e.preventDefault()
-                p.style.display = 'block'
-            }
-        })
-        inputList.forEach((input) => {
-            input.addEventListener('focus', () => {
-                p.style.display = 'none'
-    
-            })
-        })
-    
-    </script>
-    </body>
-<!--    <body>
         <div class="container">
-             Title section 
             <div class="top">
                 <div class="title">Booking</div>
                 <p>Please fill all the details</p>
             </div>
 
             <div class="content">
-                <form METHOD="POST" ACTION="s3">
+                <form METHOD="POST" ACTION="../s3">
                     <div class="user-details">
+                        <!-- Full Name -->
                         <div class="input-box">
                             <span class="details">Full Name</span>
-                            <input type="text" placeholder="Enter your name" name="name">
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
                         </div>
+                        <!-- Contact Number -->
                         <div class="input-box">
                             <span class="details">Phone Number</span>
-                            <input type="text" placeholder="Enter your number" name="contact">
+                            <input type="text" id="contact" name="contact" placeholder="Enter your number" required>
                         </div>
+                        <!-- Chamber Location -->
                         <div class="input-box">
                             <span class="details">Chamber Location</span>
-                            <input type="text" placeholder="Enter chamber location" name="add">
+                            <input type="text" id="add" name="add" placeholder="Enter chamber location">
                         </div>
-
-                         Fetch payment amount dynamically 
+                        <!-- Payment Amount (Fetched Dynamically) -->
                         <div class="input-box">
                             <span class="details">Payment</span>
-                            <input type="text" id="fee" name="fee" readonly>
+                            <input type="text" id="fee" name="fee" placeholder="Payment Amount" readonly>
                         </div>
+                        <!-- Appointment Day -->
                         <div class="input-box">
                             <span class="details">Appointment Day</span>
-                            <input type="text" placeholder="Enter Day of appointment" name="day">
-                        </div>
-                        <div class="button">
-                            <button type="button" id="payNow">Pay Now</button>
+                            <input type="text" id="day" name="day" placeholder="Enter Day of appointment">
                         </div>
                     </div>
+                    <!-- Gender Details -->
                     <div class="gender-details">
                         <span class="details">Gender:</span>
                         <label for="male">Male <input type="radio" name="mygender" id="male" value="male"></label>
                         <label for="female">Female <input type="radio" name="mygender" id="female" value="female"></label>
-                        <label for="other">Other <input type="radio" name="mygender" id="other" value="others"></label>
+                        <label for="other">Other <input type="radio" name="mygender" id="other" value="other"></label>
                     </div>
+                    <!-- Book Appointment Button -->
                     <div class="button">
-                        <button id="bookAppointment" disabled>Book Appointment</button>
+                        <button id="bookAppointment" type="submit">Pay Now</button>
                     </div>
                 </form>
             </div>
         </div>
 
         <script>
-            async function fetchPaymentAmount() {
-                try {
-                    const response = await fetch('/api/getPaymentAmount');
-                    const data = await response.json();
-                    document.getElementById('fee').value = data.amount;
-                } catch (error) {
-                    console.error('Error fetching payment amount:', error);
-                }
-            }
-
-            document.getElementById('payNow').addEventListener('click', async () => {
-                try {
-                    const paymentResponse = await fetch('/api/processPayment', {method: 'POST'}); 
-                    const paymentData = await paymentResponse.json();
-
-                    if (paymentData.success) {
-                        alert('Payment successful!');
-                        document.getElementById('bookAppointment').disabled = false; 
-                    } else {
-                        alert('Payment failed. Please try again.');
-                    }
-                } catch (error) {
-                    console.error('Error processing payment:', error);
-                }
+            document.addEventListener("DOMContentLoaded", function () {
+                // Fetch the stored fee value from localStorage
+                const fees = localStorage.getItem("fees") || "NULL";
+                const payment = document.querySelector("#fee");
+                payment.value = fees;
+                payment.readOnly = true;
             });
-
-            window.onload = fetchPaymentAmount;
             
-             const inputList = document.querySelectorAll('input')
-        const p = document.querySelector('p')
-        const btn = document.querySelector('button')
-        btn.addEventListener('click', (e) => {
-            const filled = [...inputList].every((input) => {
-                return input.value
+            
+            const inputList = document.querySelectorAll('input')
+            const p = document.querySelector('p')
+            const btn = document.querySelector('button')
+            btn.addEventListener('click', (e) => {
+                const filled = [...inputList].every((input) => {
+                    return input.value
+                })
+                if (!filled) {
+                    e.preventDefault()
+                    p.style.display = 'block'
+                }
             })
-            if (!filled) {
-                e.preventDefault()
-                p.style.display = 'block'
-            }
-        })
-        inputList.forEach((input) => {
-            input.addEventListener('focus', () => {
-                p.style.display = 'none'
-    
-            })
-        })
-        </script>
-    </body>-->
+            inputList.forEach((input) => {
+                input.addEventListener('focus', () => {
+                    p.style.display = 'none'
 
-</html> 
+                })
+            })
+        </script>
+    </body>
 
 </html>

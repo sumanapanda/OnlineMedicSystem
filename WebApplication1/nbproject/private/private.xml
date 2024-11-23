@@ -14,14 +14,17 @@
         <group>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/web/homePage.html</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/web/admin/account.html</file>
+            <file>file:/E:/Advanced%20JAVA/WebApplication1/web/pharmacy-details.html</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/src/java/docSignIn.java</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/web/WEB-INF/web.xml</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/src/java/s2.java</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/src/java/adminServlet.java</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/web/Doctor/signIn.html</file>
+            <file>file:/E:/Advanced%20JAVA/WebApplication1/web/emergency.html</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/src/java/appointmentCancel.java</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/web/Doctor/doctor_patient.html</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/src/java/signInServlet.java</file>
+            <file>file:/E:/Advanced%20JAVA/WebApplication1/src/java/passPServlet.java</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/web/admin/pharmacy-list.html</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/web/admin/index.html</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/web/Patient/appointmentDetails.html</file>
@@ -35,10 +38,12 @@
             <file>file:/E:/Advanced%20JAVA/WebApplication1/web/Patient/index.html</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/src/java/approveServlet.java</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/src/java/patientAppointment.java</file>
+            <file>file:/E:/Advanced%20JAVA/WebApplication1/web/pharmacy-list.html</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/web/Patient/booking.html</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/src/java/admin_doctor.java</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/src/java/s3.java</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/web/Patient/patientLogin.html</file>
+            <file>file:/E:/Advanced%20JAVA/WebApplication1/src/java/account.java</file>
             <file>file:/E:/Advanced%20JAVA/WebApplication1/src/java/adminPatient.java</file>
         </group>
     </open-files>

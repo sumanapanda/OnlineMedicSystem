@@ -15,11 +15,8 @@ public class s1 extends HttpServlet {
         String uid = (String) ses.getAttribute("e_mail"); // doctor email
 
         try {
-
             Class.forName("com.mysql.cj.jdbc.Driver");
-
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicSystem", "root", "PHW#84#jeor");
-
             String updateQuery = "UPDATE patientInfo SET age = ?, department = ? WHERE e_mail = ?";
             PreparedStatement pstmt = con.prepareStatement(updateQuery);
             pstmt.setString(1, nm3);
@@ -173,13 +170,18 @@ public class s1 extends HttpServlet {
                             String chamber = rs1.getString("chamber");
                             String gender = rs1.getString("gender");
                             String fees = rs1.getString("fees");
+                          
 
                             pw1.println("<div class=\"profile-container\">");
-
-                            // Profile card with doctor data
                             pw1.println("<div class=\"profile-card\">");
                             pw1.println("<div class=\"image\">");
-                            pw1.println("<img src=\"https://static.vecteezy.com/system/resources/thumbnails/008/957/225/small/female-doctor-avatar-clipart-icon-in-flat-design-vector.jpg\" alt=\"" + doctorName + "\" class=\"profile-img\" />");
+                            if(gender.equals("male")){
+                                pw1.println("<img src=\"https://static.vecteezy.com/system/resources/thumbnails/008/957/222/small/male-doctor-avatar-occupation-clipart-icon-in-flat-design-vector.jpg\" alt=\"" + doctorName + "\" class=\"profile-img\" />");
+                            }
+                            else{
+                                pw1.println("<img src=\"https://static.vecteezy.com/system/resources/thumbnails/008/957/225/small/female-doctor-avatar-clipart-icon-in-flat-design-vector.jpg\" alt=\"" + doctorName + "\" class=\"profile-img\" />");
+                            }
+                            
                             pw1.println("</div>");
                             pw1.println("<div class=\"text-data\">");
                             pw1.println("<span class=\"name\">" + doctorName + "</span>");
@@ -198,10 +200,10 @@ public class s1 extends HttpServlet {
                             pw1.println("</div>");
                             pw1.println("</div>");
                             pw1.println("<div class=\"rupee\">");
-                            pw1.println("<p><span>Fees:</span> " + fees + "</p>");
+                            pw1.println("<p><span>Fees:</span> Rs." + fees + "</p>");
                             pw1.println("</div>");
                             pw1.println("<form method=\"POST\" action=\"s2\">");
-                            pw1.println("<button class=\"sub\" value=\"" + doctorName + "\" name=\"doc\">Book</button>");
+                            pw1.println("<button class=\"sub\" value=\"" + email + "\" name=\"email\">Book</button>");
                             pw1.println("</form>");
                             pw1.println("</div>");
                             pw1.println("</div>");
