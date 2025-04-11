@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Account Summary</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f6f8;
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+                color: #333;
+            }
+
+            .container {
+                max-width: 1400px;
+                width: 100%;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+            }
+
+            header {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            header h1 {
+                font-size: 32px;
+                color: #007bff;
+            }
+
+            header p {
+                font-size: 16px;
+                color: #666;
+            }
+
+            .account-section {
+                margin-top: 30px;
+            }
+
+            .account-section h2 {
+                font-size: 24px;
+                color: #333;
+                border-bottom: 2px solid #007bff;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
+
+            .account-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .account-card {
+                background-color: #e0f7fa; 
+                border: 1px solid #b3e5fc;
+                border-radius: 10px;
+                padding: 20px;
+                width: 300px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s ease;
+            }
+
+            .account-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .account-card p {
+                font-size: 14px;
+                color: #333;
+                margin: 5px 0;
+            }
+
+            .account-card strong {
+                color: #007bff;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Account Summary</h1>
+                <p>Commission details from doctors and pharmacies</p>
+            </header>
+
+            <section class="account-section">
+                <h2>Doctor Commissions</h2>
+                <div class="account-row" id="doctor-container">
+                    <div class="account-card">
+                        <p><strong>Doctor:</strong> Dr. Ayush Roy</p>
+                        <p><strong>Total Fees Received:</strong> ₹ <span class="doctor-fee" data-fee="5000">5000</span></p>
+                        <p><strong>Commission Rate:</strong> 15%</p>
+                        <p><strong>Commission Earned:</strong> ₹ <span class="doctor-commission">0</span></p>
+                    </div>
+
+                    <div class="account-card">
+                        <p><strong>Doctor:</strong> Dr. Anjali Sharma</p>
+                        <p><strong>Total Fees Received:</strong> ₹ <span class="doctor-fee" data-fee="7000">7000</span></p>
+                        <p><strong>Commission Rate:</strong> 15%</p>
+                        <p><strong>Commission Earned:</strong> ₹ <span class="doctor-commission">0</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="account-section">
+                <h2>Pharmacy Commissions</h2>
+                <div class="account-row" id="pharmacy-container">
+                    <div class="account-card">
+                        <p><strong>Pharmacy:</strong> Green Cross Pharmacy</p>
+                        <p><strong>Total Sales:</strong> ₹ <span class="pharmacy-sale" data-sale="10000">10000</span></p>
+                        <p><strong>Commission Rate:</strong> 20%</p>
+                        <p><strong>Commission Earned:</strong> ₹ <span class="pharmacy-commission">0</span></p>
+                    </div>
+
+                    <div class="account-card">
+                        <p><strong>Pharmacy:</strong> CareWell Pharmacy</p>
+                        <p><strong>Total Sales:</strong> ₹ <span class="pharmacy-sale" data-sale="8000">8000</span></p>
+                        <p><strong>Commission Rate:</strong> 20%</p>
+                        <p><strong>Commission Earned:</strong> ₹ <span class="pharmacy-commission">0</span></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script>
+            document.querySelectorAll('.doctor-fee').forEach(fee => {
+                const totalFee = parseFloat(fee.dataset.fee);
+                const commission = totalFee * 0.15;
+                fee.closest('.account-card').querySelector('.doctor-commission').innerText = commission.toFixed(2);
+            });
+
+            document.querySelectorAll('.pharmacy-sale').forEach(sale => {
+                const totalSale = parseFloat(sale.dataset.sale);
+                const commission = totalSale * 0.20;
+                sale.closest('.account-card').querySelector('.pharmacy-commission').innerText = commission.toFixed(2);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/docSignIn.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/s3.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/homePage.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/adminPatient.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/passPServlet.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/Patient/signIn.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/patientAppointment.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/pharmacy-list.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/Patient/booking.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/Patient/patientLogin.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/emergency.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/Doctor/doctor_patient.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/WEB-INF/web.xml</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/passServlet.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/admin_doctor.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/pharmacy-details.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/admin/index.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/appointmentCancel.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/approveServlet.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/META-INF/context.xml</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/admin/account.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/adminServlet.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/account.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/admin/pharmacy-list.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/doctor_patientDetails.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/logoutServlet.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/s1.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/index.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/Doctor/signIn.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/s2.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/Patient/appointmentDetails.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/Doctor/login.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/admin/login.html</file>
+            <file>file:/D:/JavaProject/MedicSystem/src/java/signInServlet.java</file>
+            <file>file:/D:/JavaProject/MedicSystem/web/Patient/index.html</file>
+        </group>
+    </open-files>
+</project-private>
