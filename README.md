@@ -105,6 +105,10 @@ A step-by-step interface where patients can search for doctors and schedule appo
 Final step of the booking process where patients review and confirm their appointment details.
 ![Booking Confirmation Page](assets/patient2.png)
 
+### Database Screenshot 
+A visual representation of the backend database structure showcasing how patient, doctor, and appointment data are stored and organized.
+![Database Screenshot](assets/database.png)
+
 ## Author
 Sumana Panda  
 3rd Year B.Tech | Information Technology  
